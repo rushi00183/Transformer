@@ -1,0 +1,1225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TransformerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Bushing_C">
+          <Key>
+            <PropertyRef Name="PK_C_Id" />
+          </Key>
+          <Property Name="PK_C_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="FK_Test_Id" Type="int" />
+          <Property Name="FK_User_Id" Type="int" />
+          <Property Name="Is_Delete" Type="bit" />
+          <Property Name="Bushing" Type="nvarchar" MaxLength="50" />
+          <Property Name="Serial_Number" Type="nvarchar" MaxLength="50" />
+          <Property Name="B_PF" Type="nvarchar" MaxLength="50" />
+          <Property Name="B_Capacitance" Type="nvarchar" MaxLength="50" />
+          <Property Name="Test_KV" Type="nvarchar" MaxLength="50" />
+          <Property Name="Corr_Factor" Type="nvarchar" MaxLength="50" />
+          <Property Name="Test_Mode" Type="nvarchar" MaxLength="50" />
+          <Property Name="mA" Type="nvarchar" MaxLength="50" />
+          <Property Name="Watts" Type="nvarchar" MaxLength="50" />
+          <Property Name="pF" Type="nvarchar" MaxLength="50" />
+          <Property Name="pF_Corr" Type="nvarchar" MaxLength="50" />
+          <Property Name="Capacitance" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Bushing_db">
+          <Key>
+            <PropertyRef Name="PK_Bushing_Id" />
+          </Key>
+          <Property Name="PK_Bushing_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Designation" Type="nvarchar" MaxLength="50" />
+          <Property Name="Winding" Type="nvarchar" MaxLength="50" />
+          <Property Name="Serial_Number" Type="nvarchar" MaxLength="50" />
+          <Property Name="Manufacturer" Type="nvarchar" MaxLength="50" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="Rated_KV" Type="nvarchar" MaxLength="50" />
+          <Property Name="Power_Factor_C1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Power_Factor_C2" Type="nvarchar" MaxLength="50" />
+          <Property Name="Capacitance_C1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Capacitance_C2" Type="nvarchar" MaxLength="50" />
+          <Property Name="FK_Test_Id" Type="int" />
+          <Property Name="Date" Type="nvarchar" MaxLength="50" />
+          <Property Name="FK_User_Id" Type="int" />
+          <Property Name="Is_Delete" Type="bit" />
+        </EntityType>
+        <EntityType Name="Circuit_db">
+          <Key>
+            <PropertyRef Name="PK_Circuit_Id" />
+          </Key>
+          <Property Name="PK_Circuit_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="i1" Type="nvarchar" MaxLength="50" />
+          <Property Name="i2" Type="nvarchar" MaxLength="50" />
+          <Property Name="i3" Type="nvarchar" MaxLength="50" />
+          <Property Name="i4" Type="nvarchar" MaxLength="50" />
+          <Property Name="i5" Type="nvarchar" MaxLength="50" />
+          <Property Name="i6" Type="nvarchar" MaxLength="50" />
+          <Property Name="i7" Type="nvarchar" MaxLength="50" />
+          <Property Name="i8" Type="nvarchar" MaxLength="50" />
+          <Property Name="i9" Type="nvarchar" MaxLength="50" />
+          <Property Name="i10" Type="nvarchar" MaxLength="50" />
+          <Property Name="i11" Type="nvarchar" MaxLength="50" />
+          <Property Name="j1" Type="nvarchar" MaxLength="50" />
+          <Property Name="j2" Type="nvarchar" MaxLength="50" />
+          <Property Name="j3" Type="nvarchar" MaxLength="50" />
+          <Property Name="j4" Type="nvarchar" MaxLength="50" />
+          <Property Name="j5" Type="nvarchar" MaxLength="50" />
+          <Property Name="j6" Type="nvarchar" MaxLength="50" />
+          <Property Name="j7" Type="nvarchar" MaxLength="50" />
+          <Property Name="j8" Type="nvarchar" MaxLength="50" />
+          <Property Name="j9" Type="nvarchar" MaxLength="50" />
+          <Property Name="j10" Type="nvarchar" MaxLength="50" />
+          <Property Name="j11" Type="nvarchar" MaxLength="50" />
+          <Property Name="k1" Type="nvarchar" MaxLength="50" />
+          <Property Name="k2" Type="nvarchar" MaxLength="50" />
+          <Property Name="k3" Type="nvarchar" MaxLength="50" />
+          <Property Name="k4" Type="nvarchar" MaxLength="50" />
+          <Property Name="k5" Type="nvarchar" MaxLength="50" />
+          <Property Name="k6" Type="nvarchar" MaxLength="50" />
+          <Property Name="k7" Type="nvarchar" MaxLength="50" />
+          <Property Name="k8" Type="nvarchar" MaxLength="50" />
+          <Property Name="k9" Type="nvarchar" MaxLength="50" />
+          <Property Name="k10" Type="nvarchar" MaxLength="50" />
+          <Property Name="k11" Type="nvarchar" MaxLength="50" />
+          <Property Name="FK_Test_Id" Type="int" />
+          <Property Name="FK_User_Id" Type="int" />
+          <Property Name="Is_Delete" Type="bit" />
+        </EntityType>
+        <EntityType Name="Insulation_db">
+          <Key>
+            <PropertyRef Name="PK_Insulation_Id" />
+          </Key>
+          <Property Name="PK_Insulation_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="i1" Type="nvarchar" MaxLength="50" />
+          <Property Name="i2" Type="nvarchar" MaxLength="50" />
+          <Property Name="i3" Type="nvarchar" MaxLength="50" />
+          <Property Name="i4" Type="nvarchar" MaxLength="50" />
+          <Property Name="i5" Type="nvarchar" MaxLength="50" />
+          <Property Name="i6" Type="nvarchar" MaxLength="50" />
+          <Property Name="i7" Type="nvarchar" MaxLength="50" />
+          <Property Name="i8" Type="nvarchar" MaxLength="50" />
+          <Property Name="i9" Type="nvarchar" MaxLength="50" />
+          <Property Name="i10" Type="nvarchar" MaxLength="50" />
+          <Property Name="i11" Type="nvarchar" MaxLength="50" />
+          <Property Name="i12" Type="nvarchar" MaxLength="50" />
+          <Property Name="i13" Type="nvarchar" MaxLength="50" />
+          <Property Name="i14" Type="nvarchar" MaxLength="50" />
+          <Property Name="i15" Type="nvarchar" MaxLength="50" />
+          <Property Name="i16" Type="nvarchar" MaxLength="50" />
+          <Property Name="i17" Type="nvarchar" MaxLength="50" />
+          <Property Name="i18" Type="nvarchar" MaxLength="50" />
+          <Property Name="i19" Type="nvarchar" MaxLength="50" />
+          <Property Name="i20" Type="nvarchar" MaxLength="50" />
+          <Property Name="i21" Type="nvarchar" MaxLength="50" />
+          <Property Name="i22" Type="nvarchar" MaxLength="50" />
+          <Property Name="i23" Type="nvarchar" MaxLength="50" />
+          <Property Name="i24" Type="nvarchar" MaxLength="50" />
+          <Property Name="i25" Type="nvarchar" MaxLength="50" />
+          <Property Name="i26" Type="nvarchar" MaxLength="50" />
+          <Property Name="i27" Type="nvarchar" MaxLength="50" />
+          <Property Name="i28" Type="nvarchar" MaxLength="50" />
+          <Property Name="i29" Type="nvarchar" MaxLength="50" />
+          <Property Name="i30" Type="nvarchar" MaxLength="50" />
+          <Property Name="j1" Type="nvarchar" MaxLength="50" />
+          <Property Name="j2" Type="nvarchar" MaxLength="50" />
+          <Property Name="j3" Type="nvarchar" MaxLength="50" />
+          <Property Name="j4" Type="nvarchar" MaxLength="50" />
+          <Property Name="j5" Type="nvarchar" MaxLength="50" />
+          <Property Name="j6" Type="nvarchar" MaxLength="50" />
+          <Property Name="j7" Type="nvarchar" MaxLength="50" />
+          <Property Name="j8" Type="nvarchar" MaxLength="50" />
+          <Property Name="j9" Type="nvarchar" MaxLength="50" />
+          <Property Name="j10" Type="nvarchar" MaxLength="50" />
+          <Property Name="j11" Type="nvarchar" MaxLength="50" />
+          <Property Name="j12" Type="nvarchar" MaxLength="50" />
+          <Property Name="j13" Type="nvarchar" MaxLength="50" />
+          <Property Name="j14" Type="nvarchar" MaxLength="50" />
+          <Property Name="j15" Type="nvarchar" MaxLength="50" />
+          <Property Name="j16" Type="nvarchar" MaxLength="50" />
+          <Property Name="j17" Type="nvarchar" MaxLength="50" />
+          <Property Name="j18" Type="nvarchar" MaxLength="50" />
+          <Property Name="j19" Type="nvarchar" MaxLength="50" />
+          <Property Name="j20" Type="nvarchar" MaxLength="50" />
+          <Property Name="j21" Type="nvarchar" MaxLength="50" />
+          <Property Name="j22" Type="nvarchar" MaxLength="50" />
+          <Property Name="j23" Type="nvarchar" MaxLength="50" />
+          <Property Name="j24" Type="nvarchar" MaxLength="50" />
+          <Property Name="j25" Type="nvarchar" MaxLength="50" />
+          <Property Name="j26" Type="nvarchar" MaxLength="50" />
+          <Property Name="j27" Type="nvarchar" MaxLength="50" />
+          <Property Name="j28" Type="nvarchar" MaxLength="50" />
+          <Property Name="j29" Type="nvarchar" MaxLength="50" />
+          <Property Name="j30" Type="nvarchar" MaxLength="50" />
+          <Property Name="FK_Test_Id" Type="int" />
+          <Property Name="FK_User_Id" Type="int" />
+          <Property Name="Is_Delete" Type="bit" />
+        </EntityType>
+        <EntityType Name="Overall_db">
+          <Key>
+            <PropertyRef Name="PK_O_Id" />
+          </Key>
+          <Property Name="PK_O_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FK_Test_Id" Type="int" />
+          <Property Name="Is_Delete" Type="bit" />
+          <Property Name="Test_KV_1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Test_KV_2" Type="nvarchar" MaxLength="50" />
+          <Property Name="Test_KV_3" Type="nvarchar" MaxLength="50" />
+          <Property Name="Test_KV_4" Type="nvarchar" MaxLength="50" />
+          <Property Name="Test_KV_5" Type="nvarchar" MaxLength="50" />
+          <Property Name="Test_KV_6" Type="nvarchar" MaxLength="50" />
+          <Property Name="Co_Factor_1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Co_Factor_2" Type="nvarchar" MaxLength="50" />
+          <Property Name="Co_Factor_3" Type="nvarchar" MaxLength="50" />
+          <Property Name="Co_Factor_4" Type="nvarchar" MaxLength="50" />
+          <Property Name="Co_Factor_5" Type="nvarchar" MaxLength="50" />
+          <Property Name="Co_Factor_6" Type="nvarchar" MaxLength="50" />
+          <Property Name="Co_Factor_7" Type="nvarchar" MaxLength="50" />
+          <Property Name="Co_Factor_8" Type="nvarchar" MaxLength="50" />
+          <Property Name="Co_Factor_9" Type="nvarchar" MaxLength="50" />
+          <Property Name="Co_Factor_10" Type="nvarchar" MaxLength="50" />
+          <Property Name="mA_1" Type="nvarchar" MaxLength="50" />
+          <Property Name="mA_2" Type="nvarchar" MaxLength="50" />
+          <Property Name="mA_3" Type="nvarchar" MaxLength="50" />
+          <Property Name="mA_4" Type="nvarchar" MaxLength="50" />
+          <Property Name="mA_5" Type="nvarchar" MaxLength="50" />
+          <Property Name="mA_6" Type="nvarchar" MaxLength="50" />
+          <Property Name="mA_7" Type="nvarchar" MaxLength="50" />
+          <Property Name="mA_8" Type="nvarchar" MaxLength="50" />
+          <Property Name="mA_9" Type="nvarchar" MaxLength="50" />
+          <Property Name="mA_10" Type="nvarchar" MaxLength="50" />
+          <Property Name="Watts_1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Watts_2" Type="nvarchar" MaxLength="50" />
+          <Property Name="Watts_3" Type="nvarchar" MaxLength="50" />
+          <Property Name="Watts_4" Type="nvarchar" MaxLength="50" />
+          <Property Name="Watts_5" Type="nvarchar" MaxLength="50" />
+          <Property Name="Watts_6" Type="nvarchar" MaxLength="50" />
+          <Property Name="Watts_7" Type="nvarchar" MaxLength="50" />
+          <Property Name="Watts_8" Type="nvarchar" MaxLength="50" />
+          <Property Name="Watts_9" Type="nvarchar" MaxLength="50" />
+          <Property Name="Watts_10" Type="nvarchar" MaxLength="50" />
+          <Property Name="pF_1" Type="nvarchar" MaxLength="50" />
+          <Property Name="pF_2" Type="nvarchar" MaxLength="50" />
+          <Property Name="pF_3" Type="nvarchar" MaxLength="50" />
+          <Property Name="pF_4" Type="nvarchar" MaxLength="50" />
+          <Property Name="pF_5" Type="nvarchar" MaxLength="50" />
+          <Property Name="pF_6" Type="nvarchar" MaxLength="50" />
+          <Property Name="pF_7" Type="nvarchar" MaxLength="50" />
+          <Property Name="pF_8" Type="nvarchar" MaxLength="50" />
+          <Property Name="pF_9" Type="nvarchar" MaxLength="50" />
+          <Property Name="pF_10" Type="nvarchar" MaxLength="50" />
+          <Property Name="pF_Co_1" Type="nvarchar" MaxLength="50" />
+          <Property Name="pF_Co_2" Type="nvarchar" MaxLength="50" />
+          <Property Name="pF_Co_3" Type="nvarchar" MaxLength="50" />
+          <Property Name="pF_Co_4" Type="nvarchar" MaxLength="50" />
+          <Property Name="pF_Co_5" Type="nvarchar" MaxLength="50" />
+          <Property Name="pF_Co_6" Type="nvarchar" MaxLength="50" />
+          <Property Name="pF_Co_7" Type="nvarchar" MaxLength="50" />
+          <Property Name="pF_Co_8" Type="nvarchar" MaxLength="50" />
+          <Property Name="pF_Co_9" Type="nvarchar" MaxLength="50" />
+          <Property Name="pF_Co_10" Type="nvarchar" MaxLength="50" />
+          <Property Name="Cap_1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Cap_2" Type="nvarchar" MaxLength="50" />
+          <Property Name="Cap_3" Type="nvarchar" MaxLength="50" />
+          <Property Name="Cap_4" Type="nvarchar" MaxLength="50" />
+          <Property Name="Cap_5" Type="nvarchar" MaxLength="50" />
+          <Property Name="Cap_6" Type="nvarchar" MaxLength="50" />
+          <Property Name="Cap_7" Type="nvarchar" MaxLength="50" />
+          <Property Name="Cap_8" Type="nvarchar" MaxLength="50" />
+          <Property Name="Cap_9" Type="nvarchar" MaxLength="50" />
+          <Property Name="Cap_10" Type="nvarchar" MaxLength="50" />
+          <Property Name="FK_User_Id" Type="int" />
+        </EntityType>
+        <EntityType Name="Tap_Charger_db">
+          <Key>
+            <PropertyRef Name="PK_Tap_Id" />
+          </Key>
+          <Property Name="PK_Tap_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" />
+          <Property Name="Naming_Preference" Type="nvarchar" MaxLength="50" />
+          <Property Name="Manufacturer" Type="nvarchar" MaxLength="50" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="Steps" Type="nvarchar" MaxLength="50" />
+          <Property Name="Increase" Type="nvarchar" MaxLength="50" />
+          <Property Name="Decrease" Type="nvarchar" MaxLength="50" />
+          <Property Name="Oil_Volume" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name_Plate" Type="nvarchar" MaxLength="50" />
+          <Property Name="Date" Type="nvarchar" MaxLength="50" />
+          <Property Name="FK_Test_Id" Type="int" />
+          <Property Name="FK_User_Id" Type="int" />
+          <Property Name="Is_Delete" Type="bit" />
+          <Property Name="TC" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Test_db">
+          <Key>
+            <PropertyRef Name="PK_Test_Id" />
+          </Key>
+          <Property Name="PK_Test_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Test_Date" Type="nvarchar" MaxLength="50" />
+          <Property Name="Test_Time" Type="nvarchar" MaxLength="50" />
+          <Property Name="Air_Temperature" Type="nvarchar" MaxLength="50" />
+          <Property Name="Temperature_OTI" Type="nvarchar" MaxLength="50" />
+          <Property Name="Tester_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Test_Set_Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="Test_Set_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Test_Set_Serial_Number" Type="nvarchar" MaxLength="50" />
+          <Property Name="Reason_For_Testing" Type="nvarchar" MaxLength="50" />
+          <Property Name="Travel_Time" Type="nvarchar" MaxLength="50" />
+          <Property Name="Crew_Size" Type="nvarchar" MaxLength="50" />
+          <Property Name="Duration_Of_Testing" Type="nvarchar" MaxLength="50" />
+          <Property Name="FK_Test_Id" Type="int" />
+          <Property Name="FK_User_Id" Type="int" />
+          <Property Name="Is_Delete" Type="bit" />
+        </EntityType>
+        <EntityType Name="Transformer_db">
+          <Key>
+            <PropertyRef Name="PK_Test_Id" />
+          </Key>
+          <Property Name="PK_Test_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="Facility_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Plant_Number" Type="nvarchar" MaxLength="50" />
+          <Property Name="Substation" Type="nvarchar" MaxLength="50" />
+          <Property Name="Tag_no" Type="nvarchar" MaxLength="50" />
+          <Property Name="SAP_Equipment_Number" Type="nvarchar" MaxLength="50" />
+          <Property Name="Manufacturer_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Serial_Number" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mfg_Country" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mfg_Year" Type="nvarchar" MaxLength="50" />
+          <Property Name="Transformer_Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="Voltage_Rating_HV" Type="nvarchar" MaxLength="50" />
+          <Property Name="Voltage_Rating_LV" Type="nvarchar" MaxLength="50" />
+          <Property Name="Voltage_Rating_LV1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Voltage_Rating_LV2" Type="nvarchar" MaxLength="50" />
+          <Property Name="Voltage_Rating_TV" Type="nvarchar" MaxLength="50" />
+          <Property Name="Rated_Power" Type="nvarchar" MaxLength="50" />
+          <Property Name="Rated_Power_Unit" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phases" Type="nvarchar" MaxLength="50" />
+          <Property Name="Vector_Group" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sealing_System" Type="nvarchar" MaxLength="50" />
+          <Property Name="Cooling_Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="Oil_Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="Oil_Weight" Type="nvarchar" MaxLength="50" />
+          <Property Name="Tapcharger_Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="Oil_Temperature" Type="nvarchar" MaxLength="50" />
+          <Property Name="Oil_Temperature_Unit" Type="nvarchar" MaxLength="50" />
+          <Property Name="Humidity" Type="nvarchar" MaxLength="50" />
+          <Property Name="Ambient" Type="nvarchar" MaxLength="50" />
+          <Property Name="Ambient_Unit" Type="nvarchar" MaxLength="50" />
+          <Property Name="FK_User_Id" Type="int" />
+          <Property Name="Date" Type="nvarchar" MaxLength="50" />
+          <Property Name="Is_Delete" Type="bit" />
+        </EntityType>
+        <EntityType Name="Turns_Ratio_Data">
+          <Key>
+            <PropertyRef Name="PK_Turns_Data_Id" />
+          </Key>
+          <Property Name="PK_Turns_Data_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="i1" Type="nvarchar" MaxLength="50" />
+          <Property Name="i2" Type="nvarchar" MaxLength="50" />
+          <Property Name="i3" Type="nvarchar" MaxLength="50" />
+          <Property Name="i4" Type="nvarchar" MaxLength="50" />
+          <Property Name="i5" Type="nvarchar" MaxLength="50" />
+          <Property Name="i6" Type="nvarchar" MaxLength="50" />
+          <Property Name="i7" Type="nvarchar" MaxLength="50" />
+          <Property Name="i8" Type="nvarchar" MaxLength="50" />
+          <Property Name="i9" Type="nvarchar" MaxLength="50" />
+          <Property Name="i10" Type="nvarchar" MaxLength="50" />
+          <Property Name="FK_Test_Id" Type="int" />
+          <Property Name="FK_User_Id" Type="int" />
+          <Property Name="Is_Delete" Type="bit" />
+        </EntityType>
+        <EntityType Name="Turns_Ratio_Select">
+          <Key>
+            <PropertyRef Name="PK_Turns_Ratio_SId" />
+          </Key>
+          <Property Name="PK_Turns_Ratio_SId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="i1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Is_Delete" Type="bit" />
+          <Property Name="FK_Test_Id" Type="int" />
+          <Property Name="FK_User_Id" Type="int" />
+        </EntityType>
+        <EntityType Name="User_db">
+          <Key>
+            <PropertyRef Name="PK_User_Id" />
+          </Key>
+          <Property Name="PK_User_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Username" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Year" Type="nvarchar" MaxLength="50" />
+          <Property Name="Is_Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="Winding_Data">
+          <Key>
+            <PropertyRef Name="PK_Winding_Data_Id" />
+          </Key>
+          <Property Name="PK_Winding_Data_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="i1" Type="nvarchar" MaxLength="50" />
+          <Property Name="i2" Type="nvarchar" MaxLength="50" />
+          <Property Name="i3" Type="nvarchar" MaxLength="50" />
+          <Property Name="i4" Type="nvarchar" MaxLength="50" />
+          <Property Name="i5" Type="nvarchar" MaxLength="50" />
+          <Property Name="i6" Type="nvarchar" MaxLength="50" />
+          <Property Name="i7" Type="nvarchar" MaxLength="50" />
+          <Property Name="i8" Type="nvarchar" MaxLength="50" />
+          <Property Name="i9" Type="nvarchar" MaxLength="50" />
+          <Property Name="i10" Type="nvarchar" MaxLength="50" />
+          <Property Name="Is_Delete" Type="bit" />
+          <Property Name="FK_Test_Id" Type="int" />
+          <Property Name="FK_User_Id" Type="int" />
+        </EntityType>
+        <EntityType Name="Winding_Select">
+          <Key>
+            <PropertyRef Name="PK_Winding_Id" />
+          </Key>
+          <Property Name="PK_Winding_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="i1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Is_Delete" Type="bit" />
+          <Property Name="FK_Test_Id" Type="int" />
+          <Property Name="FK_User_Id" Type="int" />
+        </EntityType>
+        <EntityContainer Name="TransformerModelStoreContainer">
+          <EntitySet Name="Bushing_C" EntityType="Self.Bushing_C" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Bushing_db" EntityType="Self.Bushing_db" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Circuit_db" EntityType="Self.Circuit_db" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Insulation_db" EntityType="Self.Insulation_db" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Overall_db" EntityType="Self.Overall_db" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tap_Charger_db" EntityType="Self.Tap_Charger_db" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Test_db" EntityType="Self.Test_db" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Transformer_db" EntityType="Self.Transformer_db" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Turns_Ratio_Data" EntityType="Self.Turns_Ratio_Data" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Turns_Ratio_Select" EntityType="Self.Turns_Ratio_Select" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User_db" EntityType="Self.User_db" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Winding_Data" EntityType="Self.Winding_Data" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Winding_Select" EntityType="Self.Winding_Select" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TransformerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Bushing_C">
+          <Key>
+            <PropertyRef Name="PK_C_Id" />
+          </Key>
+          <Property Name="PK_C_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FK_Test_Id" Type="Int32" />
+          <Property Name="FK_User_Id" Type="Int32" />
+          <Property Name="Is_Delete" Type="Boolean" />
+          <Property Name="Bushing" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Serial_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="B_PF" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="B_Capacitance" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Test_KV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Corr_Factor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Test_Mode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="mA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Watts" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="pF" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="pF_Corr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Capacitance" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Bushing_db">
+          <Key>
+            <PropertyRef Name="PK_Bushing_Id" />
+          </Key>
+          <Property Name="PK_Bushing_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Designation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Winding" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Serial_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Manufacturer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Rated_KV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Power_Factor_C1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Power_Factor_C2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Capacitance_C1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Capacitance_C2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FK_Test_Id" Type="Int32" />
+          <Property Name="Date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FK_User_Id" Type="Int32" />
+          <Property Name="Is_Delete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Circuit_db">
+          <Key>
+            <PropertyRef Name="PK_Circuit_Id" />
+          </Key>
+          <Property Name="PK_Circuit_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="i1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i6" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i7" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i8" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i9" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i10" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i11" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j6" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j7" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j8" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j9" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j10" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j11" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="k1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="k2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="k3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="k4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="k5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="k6" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="k7" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="k8" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="k9" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="k10" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="k11" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FK_Test_Id" Type="Int32" />
+          <Property Name="FK_User_Id" Type="Int32" />
+          <Property Name="Is_Delete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Insulation_db">
+          <Key>
+            <PropertyRef Name="PK_Insulation_Id" />
+          </Key>
+          <Property Name="PK_Insulation_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="i1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i6" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i7" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i8" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i9" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i10" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i11" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i13" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i14" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i15" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i16" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i17" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i18" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i19" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i20" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i21" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i22" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i23" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i24" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i25" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i26" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i27" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i28" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i29" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i30" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j6" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j7" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j8" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j9" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j10" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j11" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j13" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j14" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j15" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j16" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j17" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j18" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j19" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j20" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j21" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j22" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j23" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j24" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j25" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j26" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j27" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j28" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j29" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="j30" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FK_Test_Id" Type="Int32" />
+          <Property Name="FK_User_Id" Type="Int32" />
+          <Property Name="Is_Delete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Overall_db">
+          <Key>
+            <PropertyRef Name="PK_O_Id" />
+          </Key>
+          <Property Name="PK_O_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FK_Test_Id" Type="Int32" />
+          <Property Name="Is_Delete" Type="Boolean" />
+          <Property Name="Test_KV_1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Test_KV_2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Test_KV_3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Test_KV_4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Test_KV_5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Test_KV_6" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Co_Factor_1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Co_Factor_2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Co_Factor_3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Co_Factor_4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Co_Factor_5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Co_Factor_6" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Co_Factor_7" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Co_Factor_8" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Co_Factor_9" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Co_Factor_10" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="mA_1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="mA_2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="mA_3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="mA_4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="mA_5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="mA_6" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="mA_7" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="mA_8" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="mA_9" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="mA_10" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Watts_1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Watts_2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Watts_3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Watts_4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Watts_5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Watts_6" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Watts_7" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Watts_8" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Watts_9" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Watts_10" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="pF_1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="pF_2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="pF_3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="pF_4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="pF_5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="pF_6" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="pF_7" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="pF_8" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="pF_9" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="pF_10" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="pF_Co_1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="pF_Co_2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="pF_Co_3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="pF_Co_4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="pF_Co_5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="pF_Co_6" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="pF_Co_7" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="pF_Co_8" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="pF_Co_9" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="pF_Co_10" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Cap_1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Cap_2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Cap_3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Cap_4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Cap_5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Cap_6" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Cap_7" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Cap_8" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Cap_9" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Cap_10" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FK_User_Id" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Tap_Charger_db">
+          <Key>
+            <PropertyRef Name="PK_Tap_Id" />
+          </Key>
+          <Property Name="PK_Tap_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Naming_Preference" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Manufacturer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Steps" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Increase" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Decrease" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Oil_Volume" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name_Plate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FK_Test_Id" Type="Int32" />
+          <Property Name="FK_User_Id" Type="Int32" />
+          <Property Name="Is_Delete" Type="Boolean" />
+          <Property Name="TC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Test_db">
+          <Key>
+            <PropertyRef Name="PK_Test_Id" />
+          </Key>
+          <Property Name="PK_Test_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Test_Date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Test_Time" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Air_Temperature" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Temperature_OTI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Tester_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Test_Set_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Test_Set_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Test_Set_Serial_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Reason_For_Testing" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Travel_Time" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Crew_Size" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Duration_Of_Testing" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FK_Test_Id" Type="Int32" />
+          <Property Name="FK_User_Id" Type="Int32" />
+          <Property Name="Is_Delete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Transformer_db">
+          <Key>
+            <PropertyRef Name="PK_Test_Id" />
+          </Key>
+          <Property Name="PK_Test_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Facility_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Plant_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Substation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Tag_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SAP_Equipment_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Manufacturer_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Serial_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mfg_Country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mfg_Year" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Transformer_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Voltage_Rating_HV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Voltage_Rating_LV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Voltage_Rating_LV1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Voltage_Rating_LV2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Voltage_Rating_TV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Rated_Power" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Rated_Power_Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phases" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Vector_Group" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sealing_System" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Cooling_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Oil_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Oil_Weight" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Tapcharger_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Oil_Temperature" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Oil_Temperature_Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Humidity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Ambient" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Ambient_Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FK_User_Id" Type="Int32" />
+          <Property Name="Date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Is_Delete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Turns_Ratio_Data">
+          <Key>
+            <PropertyRef Name="PK_Turns_Data_Id" />
+          </Key>
+          <Property Name="PK_Turns_Data_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="i1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i6" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i7" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i8" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i9" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i10" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FK_Test_Id" Type="Int32" />
+          <Property Name="FK_User_Id" Type="Int32" />
+          <Property Name="Is_Delete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Turns_Ratio_Select">
+          <Key>
+            <PropertyRef Name="PK_Turns_Ratio_SId" />
+          </Key>
+          <Property Name="PK_Turns_Ratio_SId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="i1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Is_Delete" Type="Boolean" />
+          <Property Name="FK_Test_Id" Type="Int32" />
+          <Property Name="FK_User_Id" Type="Int32" />
+        </EntityType>
+        <EntityType Name="User_db">
+          <Key>
+            <PropertyRef Name="PK_User_Id" />
+          </Key>
+          <Property Name="PK_User_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Year" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Is_Active" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Winding_Data">
+          <Key>
+            <PropertyRef Name="PK_Winding_Data_Id" />
+          </Key>
+          <Property Name="PK_Winding_Data_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="i1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i6" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i7" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i8" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i9" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="i10" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Is_Delete" Type="Boolean" />
+          <Property Name="FK_Test_Id" Type="Int32" />
+          <Property Name="FK_User_Id" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Winding_Select">
+          <Key>
+            <PropertyRef Name="PK_Winding_Id" />
+          </Key>
+          <Property Name="PK_Winding_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="i1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Is_Delete" Type="Boolean" />
+          <Property Name="FK_Test_Id" Type="Int32" />
+          <Property Name="FK_User_Id" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="TransformerEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Bushing_C" EntityType="Self.Bushing_C" />
+          <EntitySet Name="Bushing_db" EntityType="Self.Bushing_db" />
+          <EntitySet Name="Circuit_db" EntityType="Self.Circuit_db" />
+          <EntitySet Name="Insulation_db" EntityType="Self.Insulation_db" />
+          <EntitySet Name="Overall_db" EntityType="Self.Overall_db" />
+          <EntitySet Name="Tap_Charger_db" EntityType="Self.Tap_Charger_db" />
+          <EntitySet Name="Test_db" EntityType="Self.Test_db" />
+          <EntitySet Name="Transformer_db" EntityType="Self.Transformer_db" />
+          <EntitySet Name="Turns_Ratio_Data" EntityType="Self.Turns_Ratio_Data" />
+          <EntitySet Name="Turns_Ratio_Select" EntityType="Self.Turns_Ratio_Select" />
+          <EntitySet Name="User_db" EntityType="Self.User_db" />
+          <EntitySet Name="Winding_Data" EntityType="Self.Winding_Data" />
+          <EntitySet Name="Winding_Select" EntityType="Self.Winding_Select" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TransformerModelStoreContainer" CdmEntityContainer="TransformerEntities">
+          <EntitySetMapping Name="Bushing_C">
+            <EntityTypeMapping TypeName="TransformerModel.Bushing_C">
+              <MappingFragment StoreEntitySet="Bushing_C">
+                <ScalarProperty Name="PK_C_Id" ColumnName="PK_C_Id" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="FK_Test_Id" ColumnName="FK_Test_Id" />
+                <ScalarProperty Name="FK_User_Id" ColumnName="FK_User_Id" />
+                <ScalarProperty Name="Is_Delete" ColumnName="Is_Delete" />
+                <ScalarProperty Name="Bushing" ColumnName="Bushing" />
+                <ScalarProperty Name="Serial_Number" ColumnName="Serial_Number" />
+                <ScalarProperty Name="B_PF" ColumnName="B_PF" />
+                <ScalarProperty Name="B_Capacitance" ColumnName="B_Capacitance" />
+                <ScalarProperty Name="Test_KV" ColumnName="Test_KV" />
+                <ScalarProperty Name="Corr_Factor" ColumnName="Corr_Factor" />
+                <ScalarProperty Name="Test_Mode" ColumnName="Test_Mode" />
+                <ScalarProperty Name="mA" ColumnName="mA" />
+                <ScalarProperty Name="Watts" ColumnName="Watts" />
+                <ScalarProperty Name="pF" ColumnName="pF" />
+                <ScalarProperty Name="pF_Corr" ColumnName="pF_Corr" />
+                <ScalarProperty Name="Capacitance" ColumnName="Capacitance" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Bushing_db">
+            <EntityTypeMapping TypeName="TransformerModel.Bushing_db">
+              <MappingFragment StoreEntitySet="Bushing_db">
+                <ScalarProperty Name="PK_Bushing_Id" ColumnName="PK_Bushing_Id" />
+                <ScalarProperty Name="Designation" ColumnName="Designation" />
+                <ScalarProperty Name="Winding" ColumnName="Winding" />
+                <ScalarProperty Name="Serial_Number" ColumnName="Serial_Number" />
+                <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Rated_KV" ColumnName="Rated_KV" />
+                <ScalarProperty Name="Power_Factor_C1" ColumnName="Power_Factor_C1" />
+                <ScalarProperty Name="Power_Factor_C2" ColumnName="Power_Factor_C2" />
+                <ScalarProperty Name="Capacitance_C1" ColumnName="Capacitance_C1" />
+                <ScalarProperty Name="Capacitance_C2" ColumnName="Capacitance_C2" />
+                <ScalarProperty Name="FK_Test_Id" ColumnName="FK_Test_Id" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="FK_User_Id" ColumnName="FK_User_Id" />
+                <ScalarProperty Name="Is_Delete" ColumnName="Is_Delete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Circuit_db">
+            <EntityTypeMapping TypeName="TransformerModel.Circuit_db">
+              <MappingFragment StoreEntitySet="Circuit_db">
+                <ScalarProperty Name="PK_Circuit_Id" ColumnName="PK_Circuit_Id" />
+                <ScalarProperty Name="i1" ColumnName="i1" />
+                <ScalarProperty Name="i2" ColumnName="i2" />
+                <ScalarProperty Name="i3" ColumnName="i3" />
+                <ScalarProperty Name="i4" ColumnName="i4" />
+                <ScalarProperty Name="i5" ColumnName="i5" />
+                <ScalarProperty Name="i6" ColumnName="i6" />
+                <ScalarProperty Name="i7" ColumnName="i7" />
+                <ScalarProperty Name="i8" ColumnName="i8" />
+                <ScalarProperty Name="i9" ColumnName="i9" />
+                <ScalarProperty Name="i10" ColumnName="i10" />
+                <ScalarProperty Name="i11" ColumnName="i11" />
+                <ScalarProperty Name="j1" ColumnName="j1" />
+                <ScalarProperty Name="j2" ColumnName="j2" />
+                <ScalarProperty Name="j3" ColumnName="j3" />
+                <ScalarProperty Name="j4" ColumnName="j4" />
+                <ScalarProperty Name="j5" ColumnName="j5" />
+                <ScalarProperty Name="j6" ColumnName="j6" />
+                <ScalarProperty Name="j7" ColumnName="j7" />
+                <ScalarProperty Name="j8" ColumnName="j8" />
+                <ScalarProperty Name="j9" ColumnName="j9" />
+                <ScalarProperty Name="j10" ColumnName="j10" />
+                <ScalarProperty Name="j11" ColumnName="j11" />
+                <ScalarProperty Name="k1" ColumnName="k1" />
+                <ScalarProperty Name="k2" ColumnName="k2" />
+                <ScalarProperty Name="k3" ColumnName="k3" />
+                <ScalarProperty Name="k4" ColumnName="k4" />
+                <ScalarProperty Name="k5" ColumnName="k5" />
+                <ScalarProperty Name="k6" ColumnName="k6" />
+                <ScalarProperty Name="k7" ColumnName="k7" />
+                <ScalarProperty Name="k8" ColumnName="k8" />
+                <ScalarProperty Name="k9" ColumnName="k9" />
+                <ScalarProperty Name="k10" ColumnName="k10" />
+                <ScalarProperty Name="k11" ColumnName="k11" />
+                <ScalarProperty Name="FK_Test_Id" ColumnName="FK_Test_Id" />
+                <ScalarProperty Name="FK_User_Id" ColumnName="FK_User_Id" />
+                <ScalarProperty Name="Is_Delete" ColumnName="Is_Delete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Insulation_db">
+            <EntityTypeMapping TypeName="TransformerModel.Insulation_db">
+              <MappingFragment StoreEntitySet="Insulation_db">
+                <ScalarProperty Name="PK_Insulation_Id" ColumnName="PK_Insulation_Id" />
+                <ScalarProperty Name="i1" ColumnName="i1" />
+                <ScalarProperty Name="i2" ColumnName="i2" />
+                <ScalarProperty Name="i3" ColumnName="i3" />
+                <ScalarProperty Name="i4" ColumnName="i4" />
+                <ScalarProperty Name="i5" ColumnName="i5" />
+                <ScalarProperty Name="i6" ColumnName="i6" />
+                <ScalarProperty Name="i7" ColumnName="i7" />
+                <ScalarProperty Name="i8" ColumnName="i8" />
+                <ScalarProperty Name="i9" ColumnName="i9" />
+                <ScalarProperty Name="i10" ColumnName="i10" />
+                <ScalarProperty Name="i11" ColumnName="i11" />
+                <ScalarProperty Name="i12" ColumnName="i12" />
+                <ScalarProperty Name="i13" ColumnName="i13" />
+                <ScalarProperty Name="i14" ColumnName="i14" />
+                <ScalarProperty Name="i15" ColumnName="i15" />
+                <ScalarProperty Name="i16" ColumnName="i16" />
+                <ScalarProperty Name="i17" ColumnName="i17" />
+                <ScalarProperty Name="i18" ColumnName="i18" />
+                <ScalarProperty Name="i19" ColumnName="i19" />
+                <ScalarProperty Name="i20" ColumnName="i20" />
+                <ScalarProperty Name="i21" ColumnName="i21" />
+                <ScalarProperty Name="i22" ColumnName="i22" />
+                <ScalarProperty Name="i23" ColumnName="i23" />
+                <ScalarProperty Name="i24" ColumnName="i24" />
+                <ScalarProperty Name="i25" ColumnName="i25" />
+                <ScalarProperty Name="i26" ColumnName="i26" />
+                <ScalarProperty Name="i27" ColumnName="i27" />
+                <ScalarProperty Name="i28" ColumnName="i28" />
+                <ScalarProperty Name="i29" ColumnName="i29" />
+                <ScalarProperty Name="i30" ColumnName="i30" />
+                <ScalarProperty Name="j1" ColumnName="j1" />
+                <ScalarProperty Name="j2" ColumnName="j2" />
+                <ScalarProperty Name="j3" ColumnName="j3" />
+                <ScalarProperty Name="j4" ColumnName="j4" />
+                <ScalarProperty Name="j5" ColumnName="j5" />
+                <ScalarProperty Name="j6" ColumnName="j6" />
+                <ScalarProperty Name="j7" ColumnName="j7" />
+                <ScalarProperty Name="j8" ColumnName="j8" />
+                <ScalarProperty Name="j9" ColumnName="j9" />
+                <ScalarProperty Name="j10" ColumnName="j10" />
+                <ScalarProperty Name="j11" ColumnName="j11" />
+                <ScalarProperty Name="j12" ColumnName="j12" />
+                <ScalarProperty Name="j13" ColumnName="j13" />
+                <ScalarProperty Name="j14" ColumnName="j14" />
+                <ScalarProperty Name="j15" ColumnName="j15" />
+                <ScalarProperty Name="j16" ColumnName="j16" />
+                <ScalarProperty Name="j17" ColumnName="j17" />
+                <ScalarProperty Name="j18" ColumnName="j18" />
+                <ScalarProperty Name="j19" ColumnName="j19" />
+                <ScalarProperty Name="j20" ColumnName="j20" />
+                <ScalarProperty Name="j21" ColumnName="j21" />
+                <ScalarProperty Name="j22" ColumnName="j22" />
+                <ScalarProperty Name="j23" ColumnName="j23" />
+                <ScalarProperty Name="j24" ColumnName="j24" />
+                <ScalarProperty Name="j25" ColumnName="j25" />
+                <ScalarProperty Name="j26" ColumnName="j26" />
+                <ScalarProperty Name="j27" ColumnName="j27" />
+                <ScalarProperty Name="j28" ColumnName="j28" />
+                <ScalarProperty Name="j29" ColumnName="j29" />
+                <ScalarProperty Name="j30" ColumnName="j30" />
+                <ScalarProperty Name="FK_Test_Id" ColumnName="FK_Test_Id" />
+                <ScalarProperty Name="FK_User_Id" ColumnName="FK_User_Id" />
+                <ScalarProperty Name="Is_Delete" ColumnName="Is_Delete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Overall_db">
+            <EntityTypeMapping TypeName="TransformerModel.Overall_db">
+              <MappingFragment StoreEntitySet="Overall_db">
+                <ScalarProperty Name="PK_O_Id" ColumnName="PK_O_Id" />
+                <ScalarProperty Name="FK_Test_Id" ColumnName="FK_Test_Id" />
+                <ScalarProperty Name="Is_Delete" ColumnName="Is_Delete" />
+                <ScalarProperty Name="Test_KV_1" ColumnName="Test_KV_1" />
+                <ScalarProperty Name="Test_KV_2" ColumnName="Test_KV_2" />
+                <ScalarProperty Name="Test_KV_3" ColumnName="Test_KV_3" />
+                <ScalarProperty Name="Test_KV_4" ColumnName="Test_KV_4" />
+                <ScalarProperty Name="Test_KV_5" ColumnName="Test_KV_5" />
+                <ScalarProperty Name="Test_KV_6" ColumnName="Test_KV_6" />
+                <ScalarProperty Name="Co_Factor_1" ColumnName="Co_Factor_1" />
+                <ScalarProperty Name="Co_Factor_2" ColumnName="Co_Factor_2" />
+                <ScalarProperty Name="Co_Factor_3" ColumnName="Co_Factor_3" />
+                <ScalarProperty Name="Co_Factor_4" ColumnName="Co_Factor_4" />
+                <ScalarProperty Name="Co_Factor_5" ColumnName="Co_Factor_5" />
+                <ScalarProperty Name="Co_Factor_6" ColumnName="Co_Factor_6" />
+                <ScalarProperty Name="Co_Factor_7" ColumnName="Co_Factor_7" />
+                <ScalarProperty Name="Co_Factor_8" ColumnName="Co_Factor_8" />
+                <ScalarProperty Name="Co_Factor_9" ColumnName="Co_Factor_9" />
+                <ScalarProperty Name="Co_Factor_10" ColumnName="Co_Factor_10" />
+                <ScalarProperty Name="mA_1" ColumnName="mA_1" />
+                <ScalarProperty Name="mA_2" ColumnName="mA_2" />
+                <ScalarProperty Name="mA_3" ColumnName="mA_3" />
+                <ScalarProperty Name="mA_4" ColumnName="mA_4" />
+                <ScalarProperty Name="mA_5" ColumnName="mA_5" />
+                <ScalarProperty Name="mA_6" ColumnName="mA_6" />
+                <ScalarProperty Name="mA_7" ColumnName="mA_7" />
+                <ScalarProperty Name="mA_8" ColumnName="mA_8" />
+                <ScalarProperty Name="mA_9" ColumnName="mA_9" />
+                <ScalarProperty Name="mA_10" ColumnName="mA_10" />
+                <ScalarProperty Name="Watts_1" ColumnName="Watts_1" />
+                <ScalarProperty Name="Watts_2" ColumnName="Watts_2" />
+                <ScalarProperty Name="Watts_3" ColumnName="Watts_3" />
+                <ScalarProperty Name="Watts_4" ColumnName="Watts_4" />
+                <ScalarProperty Name="Watts_5" ColumnName="Watts_5" />
+                <ScalarProperty Name="Watts_6" ColumnName="Watts_6" />
+                <ScalarProperty Name="Watts_7" ColumnName="Watts_7" />
+                <ScalarProperty Name="Watts_8" ColumnName="Watts_8" />
+                <ScalarProperty Name="Watts_9" ColumnName="Watts_9" />
+                <ScalarProperty Name="Watts_10" ColumnName="Watts_10" />
+                <ScalarProperty Name="pF_1" ColumnName="pF_1" />
+                <ScalarProperty Name="pF_2" ColumnName="pF_2" />
+                <ScalarProperty Name="pF_3" ColumnName="pF_3" />
+                <ScalarProperty Name="pF_4" ColumnName="pF_4" />
+                <ScalarProperty Name="pF_5" ColumnName="pF_5" />
+                <ScalarProperty Name="pF_6" ColumnName="pF_6" />
+                <ScalarProperty Name="pF_7" ColumnName="pF_7" />
+                <ScalarProperty Name="pF_8" ColumnName="pF_8" />
+                <ScalarProperty Name="pF_9" ColumnName="pF_9" />
+                <ScalarProperty Name="pF_10" ColumnName="pF_10" />
+                <ScalarProperty Name="pF_Co_1" ColumnName="pF_Co_1" />
+                <ScalarProperty Name="pF_Co_2" ColumnName="pF_Co_2" />
+                <ScalarProperty Name="pF_Co_3" ColumnName="pF_Co_3" />
+                <ScalarProperty Name="pF_Co_4" ColumnName="pF_Co_4" />
+                <ScalarProperty Name="pF_Co_5" ColumnName="pF_Co_5" />
+                <ScalarProperty Name="pF_Co_6" ColumnName="pF_Co_6" />
+                <ScalarProperty Name="pF_Co_7" ColumnName="pF_Co_7" />
+                <ScalarProperty Name="pF_Co_8" ColumnName="pF_Co_8" />
+                <ScalarProperty Name="pF_Co_9" ColumnName="pF_Co_9" />
+                <ScalarProperty Name="pF_Co_10" ColumnName="pF_Co_10" />
+                <ScalarProperty Name="Cap_1" ColumnName="Cap_1" />
+                <ScalarProperty Name="Cap_2" ColumnName="Cap_2" />
+                <ScalarProperty Name="Cap_3" ColumnName="Cap_3" />
+                <ScalarProperty Name="Cap_4" ColumnName="Cap_4" />
+                <ScalarProperty Name="Cap_5" ColumnName="Cap_5" />
+                <ScalarProperty Name="Cap_6" ColumnName="Cap_6" />
+                <ScalarProperty Name="Cap_7" ColumnName="Cap_7" />
+                <ScalarProperty Name="Cap_8" ColumnName="Cap_8" />
+                <ScalarProperty Name="Cap_9" ColumnName="Cap_9" />
+                <ScalarProperty Name="Cap_10" ColumnName="Cap_10" />
+                <ScalarProperty Name="FK_User_Id" ColumnName="FK_User_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tap_Charger_db">
+            <EntityTypeMapping TypeName="TransformerModel.Tap_Charger_db">
+              <MappingFragment StoreEntitySet="Tap_Charger_db">
+                <ScalarProperty Name="PK_Tap_Id" ColumnName="PK_Tap_Id" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Naming_Preference" ColumnName="Naming_Preference" />
+                <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Steps" ColumnName="Steps" />
+                <ScalarProperty Name="Increase" ColumnName="Increase" />
+                <ScalarProperty Name="Decrease" ColumnName="Decrease" />
+                <ScalarProperty Name="Oil_Volume" ColumnName="Oil_Volume" />
+                <ScalarProperty Name="Name_Plate" ColumnName="Name_Plate" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="FK_Test_Id" ColumnName="FK_Test_Id" />
+                <ScalarProperty Name="FK_User_Id" ColumnName="FK_User_Id" />
+                <ScalarProperty Name="Is_Delete" ColumnName="Is_Delete" />
+                <ScalarProperty Name="TC" ColumnName="TC" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Test_db">
+            <EntityTypeMapping TypeName="TransformerModel.Test_db">
+              <MappingFragment StoreEntitySet="Test_db">
+                <ScalarProperty Name="PK_Test_Id" ColumnName="PK_Test_Id" />
+                <ScalarProperty Name="Test_Date" ColumnName="Test_Date" />
+                <ScalarProperty Name="Test_Time" ColumnName="Test_Time" />
+                <ScalarProperty Name="Air_Temperature" ColumnName="Air_Temperature" />
+                <ScalarProperty Name="Temperature_OTI" ColumnName="Temperature_OTI" />
+                <ScalarProperty Name="Tester_Name" ColumnName="Tester_Name" />
+                <ScalarProperty Name="Test_Set_Type" ColumnName="Test_Set_Type" />
+                <ScalarProperty Name="Test_Set_Name" ColumnName="Test_Set_Name" />
+                <ScalarProperty Name="Test_Set_Serial_Number" ColumnName="Test_Set_Serial_Number" />
+                <ScalarProperty Name="Reason_For_Testing" ColumnName="Reason_For_Testing" />
+                <ScalarProperty Name="Travel_Time" ColumnName="Travel_Time" />
+                <ScalarProperty Name="Crew_Size" ColumnName="Crew_Size" />
+                <ScalarProperty Name="Duration_Of_Testing" ColumnName="Duration_Of_Testing" />
+                <ScalarProperty Name="FK_Test_Id" ColumnName="FK_Test_Id" />
+                <ScalarProperty Name="FK_User_Id" ColumnName="FK_User_Id" />
+                <ScalarProperty Name="Is_Delete" ColumnName="Is_Delete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Transformer_db">
+            <EntityTypeMapping TypeName="TransformerModel.Transformer_db">
+              <MappingFragment StoreEntitySet="Transformer_db">
+                <ScalarProperty Name="PK_Test_Id" ColumnName="PK_Test_Id" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Facility_Name" ColumnName="Facility_Name" />
+                <ScalarProperty Name="Plant_Number" ColumnName="Plant_Number" />
+                <ScalarProperty Name="Substation" ColumnName="Substation" />
+                <ScalarProperty Name="Tag_no" ColumnName="Tag_no" />
+                <ScalarProperty Name="SAP_Equipment_Number" ColumnName="SAP_Equipment_Number" />
+                <ScalarProperty Name="Manufacturer_Name" ColumnName="Manufacturer_Name" />
+                <ScalarProperty Name="Serial_Number" ColumnName="Serial_Number" />
+                <ScalarProperty Name="Mfg_Country" ColumnName="Mfg_Country" />
+                <ScalarProperty Name="Mfg_Year" ColumnName="Mfg_Year" />
+                <ScalarProperty Name="Transformer_Type" ColumnName="Transformer_Type" />
+                <ScalarProperty Name="Voltage_Rating_HV" ColumnName="Voltage_Rating_HV" />
+                <ScalarProperty Name="Voltage_Rating_LV" ColumnName="Voltage_Rating_LV" />
+                <ScalarProperty Name="Voltage_Rating_LV1" ColumnName="Voltage_Rating_LV1" />
+                <ScalarProperty Name="Voltage_Rating_LV2" ColumnName="Voltage_Rating_LV2" />
+                <ScalarProperty Name="Voltage_Rating_TV" ColumnName="Voltage_Rating_TV" />
+                <ScalarProperty Name="Rated_Power" ColumnName="Rated_Power" />
+                <ScalarProperty Name="Rated_Power_Unit" ColumnName="Rated_Power_Unit" />
+                <ScalarProperty Name="Phases" ColumnName="Phases" />
+                <ScalarProperty Name="Vector_Group" ColumnName="Vector_Group" />
+                <ScalarProperty Name="Sealing_System" ColumnName="Sealing_System" />
+                <ScalarProperty Name="Cooling_Type" ColumnName="Cooling_Type" />
+                <ScalarProperty Name="Oil_Type" ColumnName="Oil_Type" />
+                <ScalarProperty Name="Oil_Weight" ColumnName="Oil_Weight" />
+                <ScalarProperty Name="Tapcharger_Type" ColumnName="Tapcharger_Type" />
+                <ScalarProperty Name="Oil_Temperature" ColumnName="Oil_Temperature" />
+                <ScalarProperty Name="Oil_Temperature_Unit" ColumnName="Oil_Temperature_Unit" />
+                <ScalarProperty Name="Humidity" ColumnName="Humidity" />
+                <ScalarProperty Name="Ambient" ColumnName="Ambient" />
+                <ScalarProperty Name="Ambient_Unit" ColumnName="Ambient_Unit" />
+                <ScalarProperty Name="FK_User_Id" ColumnName="FK_User_Id" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Is_Delete" ColumnName="Is_Delete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Turns_Ratio_Data">
+            <EntityTypeMapping TypeName="TransformerModel.Turns_Ratio_Data">
+              <MappingFragment StoreEntitySet="Turns_Ratio_Data">
+                <ScalarProperty Name="PK_Turns_Data_Id" ColumnName="PK_Turns_Data_Id" />
+                <ScalarProperty Name="i1" ColumnName="i1" />
+                <ScalarProperty Name="i2" ColumnName="i2" />
+                <ScalarProperty Name="i3" ColumnName="i3" />
+                <ScalarProperty Name="i4" ColumnName="i4" />
+                <ScalarProperty Name="i5" ColumnName="i5" />
+                <ScalarProperty Name="i6" ColumnName="i6" />
+                <ScalarProperty Name="i7" ColumnName="i7" />
+                <ScalarProperty Name="i8" ColumnName="i8" />
+                <ScalarProperty Name="i9" ColumnName="i9" />
+                <ScalarProperty Name="i10" ColumnName="i10" />
+                <ScalarProperty Name="FK_Test_Id" ColumnName="FK_Test_Id" />
+                <ScalarProperty Name="FK_User_Id" ColumnName="FK_User_Id" />
+                <ScalarProperty Name="Is_Delete" ColumnName="Is_Delete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Turns_Ratio_Select">
+            <EntityTypeMapping TypeName="TransformerModel.Turns_Ratio_Select">
+              <MappingFragment StoreEntitySet="Turns_Ratio_Select">
+                <ScalarProperty Name="PK_Turns_Ratio_SId" ColumnName="PK_Turns_Ratio_SId" />
+                <ScalarProperty Name="i1" ColumnName="i1" />
+                <ScalarProperty Name="Is_Delete" ColumnName="Is_Delete" />
+                <ScalarProperty Name="FK_Test_Id" ColumnName="FK_Test_Id" />
+                <ScalarProperty Name="FK_User_Id" ColumnName="FK_User_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="User_db">
+            <EntityTypeMapping TypeName="TransformerModel.User_db">
+              <MappingFragment StoreEntitySet="User_db">
+                <ScalarProperty Name="PK_User_Id" ColumnName="PK_User_Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Winding_Data">
+            <EntityTypeMapping TypeName="TransformerModel.Winding_Data">
+              <MappingFragment StoreEntitySet="Winding_Data">
+                <ScalarProperty Name="PK_Winding_Data_Id" ColumnName="PK_Winding_Data_Id" />
+                <ScalarProperty Name="i1" ColumnName="i1" />
+                <ScalarProperty Name="i2" ColumnName="i2" />
+                <ScalarProperty Name="i3" ColumnName="i3" />
+                <ScalarProperty Name="i4" ColumnName="i4" />
+                <ScalarProperty Name="i5" ColumnName="i5" />
+                <ScalarProperty Name="i6" ColumnName="i6" />
+                <ScalarProperty Name="i7" ColumnName="i7" />
+                <ScalarProperty Name="i8" ColumnName="i8" />
+                <ScalarProperty Name="i9" ColumnName="i9" />
+                <ScalarProperty Name="i10" ColumnName="i10" />
+                <ScalarProperty Name="Is_Delete" ColumnName="Is_Delete" />
+                <ScalarProperty Name="FK_Test_Id" ColumnName="FK_Test_Id" />
+                <ScalarProperty Name="FK_User_Id" ColumnName="FK_User_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Winding_Select">
+            <EntityTypeMapping TypeName="TransformerModel.Winding_Select">
+              <MappingFragment StoreEntitySet="Winding_Select">
+                <ScalarProperty Name="PK_Winding_Id" ColumnName="PK_Winding_Id" />
+                <ScalarProperty Name="i1" ColumnName="i1" />
+                <ScalarProperty Name="Is_Delete" ColumnName="Is_Delete" />
+                <ScalarProperty Name="FK_Test_Id" ColumnName="FK_Test_Id" />
+                <ScalarProperty Name="FK_User_Id" ColumnName="FK_User_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
